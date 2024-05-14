@@ -1,0 +1,627 @@
+Last login: Mon Nov 27 10:59:03 2023 from 13.233.177.3
+ubuntu@Terraform:~$ ls
+terra-aws
+ubuntu@Terraform:~$ cd terra-aws
+ubuntu@Terraform:~/terra-aws$ ls
+aws  awscliv2.zip  main.tf  terraform.tfstate
+ubuntu@Terraform:~/terra-aws$ vi main.tf
+ubuntu@Terraform:~/terra-aws$ terraform plan
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_instance.ec2_instnce["t-1"] will be created
+  + resource "aws_instance" "ec2_instnce" {
+      + ami                                  = "ami-0287a05f0ef0e9d9a"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t2.micro"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = (known after apply)
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "name" = "t-1"
+        }
+      + tags_all                             = {
+          + "name" = "t-1"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
+    }
+
+  # aws_instance.ec2_instnce["t-2"] will be created
+  + resource "aws_instance" "ec2_instnce" {
+      + ami                                  = "ami-0287a05f0ef0e9d9a"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t2.micro"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = (known after apply)
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "name" = "t-2"
+        }
+      + tags_all                             = {
+          + "name" = "t-2"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
+ubuntu@Terraform:~/terra-aws$ terraform apply
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_instance.ec2_instnce["t-1"] will be created
+  + resource "aws_instance" "ec2_instnce" {
+      + ami                                  = "ami-0287a05f0ef0e9d9a"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t2.micro"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = (known after apply)
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "name" = "t-1"
+        }
+      + tags_all                             = {
+          + "name" = "t-1"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
+    }
+
+  # aws_instance.ec2_instnce["t-2"] will be created
+  + resource "aws_instance" "ec2_instnce" {
+      + ami                                  = "ami-0287a05f0ef0e9d9a"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t2.micro"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = (known after apply)
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "name" = "t-2"
+        }
+      + tags_all                             = {
+          + "name" = "t-2"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_instance.ec2_instnce["t-2"]: Creating...
+aws_instance.ec2_instnce["t-1"]: Creating...
+aws_instance.ec2_instnce["t-2"]: Still creating... [10s elapsed]
+aws_instance.ec2_instnce["t-1"]: Still creating... [10s elapsed]
+aws_instance.ec2_instnce["t-2"]: Still creating... [20s elapsed]
+aws_instance.ec2_instnce["t-1"]: Still creating... [20s elapsed]
+aws_instance.ec2_instnce["t-2"]: Still creating... [30s elapsed]
+aws_instance.ec2_instnce["t-1"]: Still creating... [30s elapsed]
+aws_instance.ec2_instnce["t-1"]: Creation complete after 32s [id=i-0d1efc33f8c190507]
+aws_instance.ec2_instnce["t-2"]: Creation complete after 32s [id=i-0ffd2816262d06101]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+ubuntu@Terraform:~/terra-aws$ vi main.tf
+ubuntu@Terraform:~/terra-aws$ terraform apply
+aws_instance.ec2_instnce["t-2"]: Refreshing state... [id=i-0ffd2816262d06101]
+aws_instance.ec2_instnce["t-1"]: Refreshing state... [id=i-0d1efc33f8c190507]
+
+No changes. Your infrastructure matches the configuration.
+
+Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
+
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+ubuntu@Terraform:~/terra-aws$ vi main.tf
+ubuntu@Terraform:~/terra-aws$ terraform apply
+aws_instance.ec2_instnce["t-2"]: Refreshing state... [id=i-0ffd2816262d06101]
+aws_instance.ec2_instnce["t-1"]: Refreshing state... [id=i-0d1efc33f8c190507]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  ~ update in-place
+
+Terraform will perform the following actions:
+
+  # aws_instance.ec2_instnce["t-1"] will be updated in-place
+  ~ resource "aws_instance" "ec2_instnce" {
+        id                                   = "i-0d1efc33f8c190507"
+      ~ tags                                 = {
+          + "Name" = "t-1"
+          - "name" = "t-1" -> null
+        }
+      ~ tags_all                             = {
+          + "Name" = "t-1"
+          - "name" = "t-1" -> null
+        }
+        # (28 unchanged attributes hidden)
+
+        # (6 unchanged blocks hidden)
+    }
+
+  # aws_instance.ec2_instnce["t-2"] will be updated in-place
+  ~ resource "aws_instance" "ec2_instnce" {
+        id                                   = "i-0ffd2816262d06101"
+ubuntu@Terraform:~/terra-aws$ cd..
+ls\cd..: command not found
+ubuntu@Terraform:~/terra-aws$ ls
+aws  awscliv2.zip  main.tf  terraform.tfstate  terraform.tfstate.backup
+ubuntu@Terraform:~/terra-aws$ cd ..
+ubuntu@Terraform:~$ mkdir terra-docker
+ubuntu@Terraform:~$ cd terra-docker
+ubuntu@Terraform:~/terra-docker$ vi main.tf
+ubuntu@Terraform:~/terra-docker$ sudo apt update && sudo apt install docker.io
+Hit:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]                           
+Hit:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease                                  
+Hit:4 https://apt.releases.hashicorp.com jammy InRelease                                                         
+Get:5 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]                                       
+Get:6 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1200 kB]
+Get:7 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1003 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [989 kB]       
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [192 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [1143 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [186 kB]
+Get:12 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [799 kB]
+Fetched 5741 kB in 3s (1709 kB/s)  
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+71 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  bridge-utils containerd dns-root-data dnsmasq-base pigz runc ubuntu-fan
+Suggested packages:
+  ifupdown aufs-tools cgroupfs-mount | cgroup-lite debootstrap docker-doc rinse zfs-fuse | zfsutils
+The following NEW packages will be installed:
+  bridge-utils containerd dns-root-data dnsmasq-base docker.io pigz runc ubuntu-fan
+0 upgraded, 8 newly installed, 0 to remove and 71 not upgraded.
+Need to get 69.7 MB of archives.
+After this operation, 267 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 pigz amd64 2.6-1 [63.6 kB]
+Get:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 bridge-utils amd64 1.7-1ubuntu3 [34.4 kB]
+Get:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 runc amd64 1.1.7-0ubuntu1~22.04.1 [4249 kB]
+Get:4 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 containerd amd64 1.7.2-0ubuntu1~22.04.1 [36.0 MB]
+Get:5 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 dns-root-data all 2021011101 [5256 B]
+Get:6 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 dnsmasq-base amd64 2.86-1.1ubuntu0.3 [354 kB]
+Get:7 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 docker.io amd64 24.0.5-0ubuntu1~22.04.1 [28.9 MB]
+Get:8 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 ubuntu-fan all 0.12.16 [35.2 kB]
+Fetched 69.7 MB in 1s (62.0 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package pigz.
+(Reading database ... 64745 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.6-1_amd64.deb ...
+Unpacking pigz (2.6-1) ...
+Selecting previously unselected package bridge-utils.
+Preparing to unpack .../1-bridge-utils_1.7-1ubuntu3_amd64.deb ...
+Unpacking bridge-utils (1.7-1ubuntu3) ...
+Selecting previously unselected package runc.
+Preparing to unpack .../2-runc_1.1.7-0ubuntu1~22.04.1_amd64.deb ...
+Unpacking runc (1.1.7-0ubuntu1~22.04.1) ...
+Selecting previously unselected package containerd.
+Preparing to unpack .../3-containerd_1.7.2-0ubuntu1~22.04.1_amd64.deb ...
+Unpacking containerd (1.7.2-0ubuntu1~22.04.1) ...
+Selecting previously unselected package dns-root-data.
+Preparing to unpack .../4-dns-root-data_2021011101_all.deb ...
+Unpacking dns-root-data (2021011101) ...
+Selecting previously unselected package dnsmasq-base.
+Preparing to unpack .../5-dnsmasq-base_2.86-1.1ubuntu0.3_amd64.deb ...
+Unpacking dnsmasq-base (2.86-1.1ubuntu0.3) ...
+Selecting previously unselected package docker.io.
+Preparing to unpack .../6-docker.io_24.0.5-0ubuntu1~22.04.1_amd64.deb ...
+Unpacking docker.io (24.0.5-0ubuntu1~22.04.1) ...
+Selecting previously unselected package ubuntu-fan.
+Preparing to unpack .../7-ubuntu-fan_0.12.16_all.deb ...
+Unpacking ubuntu-fan (0.12.16) ...
+Setting up dnsmasq-base (2.86-1.1ubuntu0.3) ...
+Setting up runc (1.1.7-0ubuntu1~22.04.1) ...
+Setting up dns-root-data (2021011101) ...
+Setting up bridge-utils (1.7-1ubuntu3) ...
+Setting up pigz (2.6-1) ...
+Setting up containerd (1.7.2-0ubuntu1~22.04.1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up ubuntu-fan (0.12.16) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/ubuntu-fan.service → /lib/systemd/system/ubuntu-fan.service.
+Setting up docker.io (24.0.5-0ubuntu1~22.04.1) ...
+Adding group `docker' (GID 122) ...
+Done.
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Processing triggers for dbus (1.12.20-2ubuntu4.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Scanning processes...                                                                                                                                                     
+Scanning linux images...                                                                                                                                                  
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@Terraform:~/terra-docker$ free -m
+               total        used        free      shared  buff/cache   available
+Mem:             949         194         209           0         545         593
+Swap:              0           0           0
+ubuntu@Terraform:~/terra-docker$ sysctl -w vm. drop_caches=3 
+sysctl: "vm." must be of the form name=value
+sysctl: cannot stat /proc/sys/drop_caches: No such file or directory
+ubuntu@Terraform:~/terra-docker$ free -m
+               total        used        free      shared  buff/cache   available
+Mem:             949         194         205           0         549         593
+Swap:              0           0           0
+ubuntu@Terraform:~/terra-docker$ sysctl -w vm. drop_caches=0
+sysctl: "vm." must be of the form name=value
+sysctl: cannot stat /proc/sys/drop_caches: No such file or directory
+ubuntu@Terraform:~/terra-docker$ cd ..
+ubuntu@Terraform:~$ sudo sync; echo 1 > /proc/sys/vm/drop_caches
+-bash: /proc/sys/vm/drop_caches: Permission denied
+ubuntu@Terraform:~$ sudo su 
+root@Terraform:/home/ubuntu# sudo sync; echo 1 > /proc/sys/vm/drop_caches
+root@Terraform:/home/ubuntu# free -m
+               total        used        free      shared  buff/cache   available
+Mem:             949         217         550           0         181         572
+Swap:              0           0           0
+root@Terraform:/home/ubuntu# su ubuntu
+ubuntu@Terraform:~$ sudo su
+root@Terraform:/home/ubuntu# usermod -aG docker ubuntu
+root@Terraform:/home/ubuntu# su ubuntu
+ubuntu@Terraform:~$ id ubuntu
+uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),119(netdev),120(lxd),122(docker)
+ubuntu@Terraform:~$ cd terra-docker
+ubuntu@Terraform:~/terra-docker$ ls
+main.tf
+ubuntu@Terraform:~/terra-docker$ terraform init
+
+Initializing the backend...
+Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+╷
+│ Error: Missing newline after argument
+│ 
+│   on main.tf line 13, in resource "docker_image" "nginx":
+│   13:   name = nginx:latest
+│ 
+│ An argument definition must end with a newline.
+╵
+
+ubuntu@Terraform:~/terra-docker$ vi main.tf
+ubuntu@Terraform:~/terra-docker$ terraform validate
+╷
+│ Error: Missing required provider
+│ 
+│ This configuration requires provider registry.terraform.io/kreuzwerker/docker, but that provider isn't available. You may be able to install it automatically by
+│ running:
+│   terraform init
+╵
+ubuntu@Terraform:~/terra-docker$ vi main.tf
+ubuntu@Terraform:~/terra-docker$ terraform init
+
+Initializing the backend...
+
+Initializing provider plugins...
+- Finding kreuzwerker/docker versions matching "~> 3.0.2"...
+- Installing kreuzwerker/docker v3.0.2...
+- Installed kreuzwerker/docker v3.0.2 (self-signed, key ID BD080C4571C6104C)
+
+Partner and community providers are signed by their developers.
+If you'd like to know more about provider signing, you can read about it here:
+https://www.terraform.io/docs/cli/plugins/signing.html
+
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+ubuntu@Terraform:~/terra-docker$ terraform plan
+╷
+│ Error: Missing required argument
+│ 
+│   on main.tf line 17, in resource "docker_container" "nginx":
+│   17: resource "docker_container" "nginx" {
+│ 
+│ The argument "image" is required, but no definition was found.
+╵
+╷
+│ Error: Unsupported argument
+│ 
+│   on main.tf line 18, in resource "docker_container" "nginx":
+│   18:   source = docker_image.nginx.latest
+│ 
+│ An argument named "source" is not expected here.
+╵
+ubuntu@Terraform:~/terra-docker$ vi main.tf
+ubuntu@Terraform:~/terra-docker$ terraform plan
+╷
+│ Error: Unsupported attribute
+│ 
+│   on main.tf line 18, in resource "docker_container" "nginx":
+│   18:   image = docker_image.nginx.latest
+│ 
+│ This object has no argument, nested block, or exported attribute named "latest".
+╵
+ubuntu@Terraform:~/terra-docker$ vi main.tf
+ubuntu@Terraform:~/terra-docker$ terraform plan
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # docker_container.nginx will be created
+  + resource "docker_container" "nginx" {
+      + attach                                      = false
+      + bridge                                      = (known after apply)
+      + command                                     = (known after apply)
+      + container_logs                              = (known after apply)
+      + container_read_refresh_timeout_milliseconds = 15000
+      + entrypoint                                  = (known after apply)
+      + env                                         = (known after apply)
+      + exit_code                                   = (known after apply)
+      + hostname                                    = (known after apply)
+      + id                                          = (known after apply)
+      + image                                       = "nginx:latest"
+      + init                                        = (known after apply)
+      + ipc_mode                                    = (known after apply)
+      + log_driver                                  = (known after apply)
+      + logs                                        = false
+      + must_run                                    = true
+      + name                                        = "nginx-tf-ctr"
+      + network_data                                = (known after apply)
+      + read_only                                   = false
+      + remove_volumes                              = true
+      + restart                                     = "no"
+      + rm                                          = false
+      + runtime                                     = (known after apply)
+      + security_opts                               = (known after apply)
+      + shm_size                                    = (known after apply)
+      + start                                       = true
+      + stdin_open                                  = false
+      + stop_signal                                 = (known after apply)
+      + stop_timeout                                = (known after apply)
+      + tty                                         = false
+      + wait                                        = false
+      + wait_timeout                                = 60
+
+      + ports {
+          + external = 80
+          + internal = 80
+          + ip       = "0.0.0.0"
+          + protocol = "tcp"
+        }
+    }
+
+  # docker_image.nginx will be created
+  + resource "docker_image" "nginx" {
+      + id           = (known after apply)
+      + image_id     = (known after apply)
+      + keep_locally = false
+      + name         = "nginx:latest"
+      + repo_digest  = (known after apply)
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
+ubuntu@Terraform:~/terra-docker$ terraform apply
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # docker_container.nginx will be created
+  + resource "docker_container" "nginx" {
+      + attach                                      = false
+      + bridge                                      = (known after apply)
+      + command                                     = (known after apply)
+      + container_logs                              = (known after apply)
+      + container_read_refresh_timeout_milliseconds = 15000
+      + entrypoint                                  = (known after apply)
+      + env                                         = (known after apply)
+      + exit_code                                   = (known after apply)
+      + hostname                                    = (known after apply)
+      + id                                          = (known after apply)
+      + image                                       = "nginx:latest"
+      + init                                        = (known after apply)
+      + ipc_mode                                    = (known after apply)
+      + log_driver                                  = (known after apply)
+      + logs                                        = false
+      + must_run                                    = true
+      + name                                        = "nginx-tf-ctr"
+      + network_data                                = (known after apply)
+      + read_only                                   = false
+      + remove_volumes                              = true
+      + restart                                     = "no"
+      + rm                                          = false
+      + runtime                                     = (known after apply)
+      + security_opts                               = (known after apply)
+      + shm_size                                    = (known after apply)
+      + start                                       = true
+      + stdin_open                                  = false
+      + stop_signal                                 = (known after apply)
+      + stop_timeout                                = (known after apply)
+      + tty                                         = false
+      + wait                                        = false
+      + wait_timeout                                = 60
+
+      + ports {
+          + external = 80
+          + internal = 80
+          + ip       = "0.0.0.0"
+          + protocol = "tcp"
+        }
+    }
+
+  # docker_image.nginx will be created
+  + resource "docker_image" "nginx" {
+      + id           = (known after apply)
+      + image_id     = (known after apply)
+      + keep_locally = false
+      + name         = "nginx:latest"
+      + repo_digest  = (known after apply)
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+docker_image.nginx: Creating...
+docker_image.nginx: Creation complete after 9s [id=sha256:a6bd71f48f6839d9faae1f29d3babef831e76bc213107682c5cc80f0cbb30866nginx:latest]
+docker_container.nginx: Creating...
+docker_container.nginx: Creation complete after 1s [id=a0fb8f0a826ffbd8e020ec0429761f87977c4a1c356c36da174647fa1c26fff4]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+ubuntu@Terraform:~/terra-docker$ docker container ls
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                NAMES
+a0fb8f0a826f   nginx:latest   "/docker-entrypoint.…"   14 seconds ago   Up 12 seconds   0.0.0.0:80->80/tcp   nginx-tf-ctr
+ubuntu@Terraform:~/terra-docker$
+
